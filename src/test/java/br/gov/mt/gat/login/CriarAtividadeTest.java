@@ -36,7 +36,7 @@ public class CriarAtividadeTest {
         navegador.findElement(By.cssSelector("#__next > div > div:nth-child(4) > div > div > div > div.BottomNav_center_buttom__85g9S > button")).click();
         Thread.sleep(5000);
 
-        jse.executeScript("window.scrollTo(0,0)");
+        jse.executeScript("window.scrollTo(2000,2000)");
         navegador.findElement(By.id("outlined-required")).click();
 
 

@@ -8,11 +8,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class EditarAtividadeTest {
+public class IteragirAtividadeTest {
 
     @Test
-    @DisplayName("Editar atividade com dados válidos")
-    public void testEditarAtividadeComDadosValidos() throws InterruptedException {
+    @DisplayName("Iteragir atividade com dados válidos")
+    public void testIteragirAtividadeComDadosValidos() throws InterruptedException {
 
         //Vou abrir o Chrome
         WebDriverManager.chromedriver().setup();
@@ -34,27 +34,31 @@ public class EditarAtividadeTest {
 
         navegador.findElement(By.cssSelector(".MuiButton-contained")).click();
         jse.executeScript("window.scrollTo(2000,2000)");
-       // navegador.findElement(By.cssSelector("#__next > div > div:nth-child(3) > div > a:nth-child(3) > div > button > div")).click();
+
         navegador.findElement(By.cssSelector(".Card_link__sCJOu:nth-child(3) .Card_qtd___WQhP")).click();
-      //  navegador.findElement(By.cssSelector("body > next-route-announcer")).click();
-        Thread.sleep(5000);
-        jse.executeScript("window.scrollTo(2000,2000)");
+       // navegador.findElement(By.cssSelector(".CardTarefa_box__8W7vJ:nth-child(3) #long-button > .MuiSvgIcon-root")).click();
+        //navegador.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(1)")).click();
 
-       //  navegador.findElement(By.cssSelector(".MuiInputBase-multiline")).click();
 
-        navegador.findElement(By.cssSelector("#long-button")).click();
-        navegador.findElement(By.tagName("body"));
-        jse.executeScript("window.scrollTo(2000,2000)");
-        navegador.findElement(By.cssSelector(".MuiMenuItem-root:nth-child(2)")).click();
-        Thread.sleep(5000);
+       /* {
+            WebElement element = driver.findElement(By.id("demo-simple-select"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element).clickAndHold().perform();
+        }*/
+        /*{
+            WebElement element = driver.findElement(By.cssSelector(".MuiBackdrop-invisible"));
+            Actions builder = new Actions(driver);
+            builder.moveToElement(element).release().perform();
+        }*/
+        navegador.findElement(By.cssSelector("body")).click();
+        navegador.findElement(By.cssSelector(".Mui-selected")).click();
+
 
         jse.executeScript("window.scrollTo(2000,2000)");
-        navegador.findElement(By.id("outlined-required")).click();
 
         navegador.findElement(By.id("outlined-multiline-static")).click();
-        navegador.findElement(By.id("outlined-multiline-static")).sendKeys("Realizando teste Automatizado");
-        navegador.findElement(By.id("botao-confirmar")).click();
-        jse.executeScript("window.scrollTo(0,0)");
-
+        navegador.findElement(By.id("outlined-multiline-static")).sendKeys("testando 123");
+        navegador.findElement(By.cssSelector(".CardTarefa_confirmar__aaZ0E")).click();
+        jse.executeScript("window.scrollTo(0,97.5999984741211)");
     }
-}
+    }
